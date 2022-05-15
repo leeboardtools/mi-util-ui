@@ -890,7 +890,9 @@ from BS col-form-label */
 
 .Form-control:focus,
 .Cell:focus,
-.DropdownSelector:focus-within {
+.WhenEditor-partEditor:focus,
+.DropdownSelector:focus-within,
+.RollingSelector:focus-within {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
@@ -898,7 +900,8 @@ from BS col-form-label */
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-.DropdownSelector:focus-within {
+.DropdownSelector:focus-within,
+.RollingSelector:focus-within {
     border-radius: 0;
 }
 
@@ -2272,4 +2275,357 @@ from BS col-form-label */
 }
 
 
+.RollingSelector-main {
+    cursor: pointer;
+}
+
+.RollingSelector-main:focus {
+    outline: none;
+}
+
+
+.RollingSelector-itemList {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+}
+
+.RollingSelector-itemList {
+    height: auto;
+    max-height: 70vh;
+    width: 100%;
+    font-size: 0.9em;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    padding-bottom: .25rem;
+    color: #212529;
+}
+
+.RollingSelector-itemList:focus {
+    outline: none;    
+}
+
+.RollingSelector-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.RollingSelector-item:hover {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.RollingSelector-item.selected {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.RollingSelector-item.centerItem {
+    outline: thin dotted;
+}
+
+
+.DatePartSelector {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+}
+
+.DatePartSelector-header {
+    background-color: whitesmoke;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-around!important;
+    text-align: center!important;
+    font-size: 0.875em;
+
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+
+    margin: 0px;
+    border-bottom: solid 1px lightgray;
+}
+
+.DatePartSelector-monthSelector, .DatePartSelector-yearSelector {
+    display: flex;
+    justify-content: space-between!important;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.DatePartSelector-monthSelector {
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.DatePartSelector-yearSelector {
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.DatePartSelector-leftArrow, .DatePartSelector-rightArrow {
+    cursor: pointer;
+    border: none;
+}
+
+.DatePartSelector-leftArrow {
+    margin-left: 10px;
+}
+
+.DatePartSelector-rightArrow {
+    margin-right: 10px;
+}
+
+
+.DatePartSelector-yearValue, .DatePartSelector-monthValue {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.DatePartSelector-footer {
+    background-color: whitesmoke;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: right!important;
+    text-align: right!important;
+}
+
+
+.DatePartSelector-todayButton {
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    text-align: center!important;
+    margin: 2px;
+    font-size: 0.875em;
+    height: 1.5rem;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+.DatePartSelector-calendar {
+    width: 100%;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.DatePartSelector-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center!important;
+}
+
+.DatePartSelector-cell {
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    text-align: center!important;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 2px;
+    font-size: 0.875em;
+}
+
+.DatePartSelector-cell.dow {
+    margin-bottom: 0px;
+}
+
+.DatePartSelector-cell.date {
+    cursor: pointer;
+}
+
+.DatePartSelector-cell.today {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.DatePartSelector-cell.selected {
+    color: darkblue;
+    background:  lightblue;
+    border-radius: 50%;
+}
+
+.DatePartSelector-cell.otherMonth {
+    color: dimgray;
+}
+
+
+
+
+.TimePartSelector {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+}
+
+.TimePartSelector-header {
+    background-color: whitesmoke;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center!important;
+    text-align: center!important;
+    */
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+
+
+.TimePartSelector-allDayButton {
+    display: block;
+    text-align: inherit;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    margin: 2px;
+    font-size: 0.9em;
+    height: 1.5rem;
+    border-style: none;
+    cursor: pointer;
+}
+
+.TimePartSelector-allDayButton:hover {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.TimePartSelector-allDayButton.checked {
+    color: #fff;
+    background-color: #007bff;
+}
+
+
+.TimePartSelector-timeList {
+    height: auto;
+    max-height: 70vh;
+    width: 100%;
+    font-size: 0.9em;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    padding-bottom: .25rem;
+    color: #212529;
+}
+
+.TimePartSelector-timeItem {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.TimePartSelector-timeItem:hover {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.TimePartSelector-timeItem.selected {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.TimePartSelector-timeItem.centerItem {
+    outline: thin dotted;
+}
+
+
+.WhenEditor-partsContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.WhenEditor-partsContainer > .part {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.WhenEditor-partEditor {
+    display: block;
+    /*width: 100%;*/
+    padding: .375rem 2px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+    transition: border-color .15s
+        ease-in-out,box-shadow .15s
+        ease-in-out;
+    
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.WhenEditor-partEditor.CellWhen {
+    height: calc(1.5rem + .3rem + 2px);
+}
+
+.WhenEditor-partEditor.datePartEditor {
+    width: 5rem;
+}
+
+.WhenEditor-partEditor.timePartEditor {
+    width: 5rem;
+}
+
+.WhenEditor-partEditor.CellWhen:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.WhenEditor-partEditor.readOnly {
+    background-color: inherit!Important;
+    border-style: none;
+}
 
